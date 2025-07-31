@@ -4,11 +4,12 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo 'Hello'
-          echo 'GitHub Actions'
+      - run: echo ${{ github.job }}
   job2:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: ls -al
+      - run: echo ${{ github.job }}
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.job }}
